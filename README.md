@@ -49,5 +49,6 @@ This indicates value transfer was requested on some other server and you are get
 
 ---
 
-
+## Tests
+Check the scripts directory for various load and resiliency tests.
 
