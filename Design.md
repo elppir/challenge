@@ -23,19 +23,22 @@ Quite naturally, the first request is made to resource `transfers` as a HTTP POS
 
 The successful response is 302 Redirect to the newly created transfer resource.
 
-### Ripple effect:
+### The _Ripple_ effect:
 
-During the handling of the request, its _ripple_ effect needs to be sent to the server of the counterparty. The end point is _discovered_ (currently via a system property) and used to _ripple_ the change forward. This request takes the same transfer object (now with an identifier) and tries to *`PUT`* that transfer object to a remote server. PUT is chosen for idempotency and future retries. 
-Ripple request handling including committing the transfer to the trustline. This 
+During the handling of the request, its _ripple_ effect needs to be sent to the server of the counterparty. The end point is _discovered_ (currently via a system property) and used to _ripple_ the change forward. This ripple request takes the same  initial transfer object (now with an identifier) and tries to *`PUT`* that transfer object to the `ripples` resource on a remote server. PUT is chosen for idempotency and future retries. 
 
-A successful ripple response _commits_ the initial transfer request. A failed response aborts that request. A noticeable side effect is that "remote" side commits first while the source of transfer commits last. 
+This Ripple request is then handled at that remote server and leads to  committing the transfer details on that server.  Thats leads to a successful response ( HTTP Status 200) back to the initial server.
 
-A future TODO could be to make this more reliable and have the ripple responses also send commit watermarks on the remote side. 
+A successful ripple response _commits_ the initial transfer request on the first server. A failed response aborts that request. A noticeable side effect is that "remote" side commits first while the source of transfer commits last. 
+
+A future TODO could be to make this more reliable and have the ripple responses also piggyback commit watermarks of the remote side. 
+
+Essentially using either the `transfers` or the `ripples` resource, we are propagating the `transfer` commit log in a somewhat consistent way.
 
 
 ## Internal Composition
 
-There are various processors TransferProcessor and RippleProcessor which deal with processing the actual requests on those end points. 
+There are various processors like TransferProcessor and RippleProcessor which deal with processing the actual requests on those end points. 
 
 
 ## Caveats
