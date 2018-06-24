@@ -21,7 +21,7 @@ The awesome Challenge to move value from user *a* to user *b* consistently *BUT*
    * Server running a's trustline _discovers_ b's endpoint also via the *"other"* system property and vice-versa.
 
 2. Make a test request by running this from repo_root in a terminal shell.
-   `.scripts/one_request_test.sh`
+   `./scripts/one_request_test.sh`
 	
    This script will send one unit from _a to b_ on port `8080` and from _b to a_ on port `8079`. You will see the results in server logs.
 
