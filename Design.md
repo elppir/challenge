@@ -38,3 +38,6 @@ A future TODO could be to make this more reliable and have the ripple responses 
 There are various processors TransferProcessor and RippleProcessor which deal with processing the actual requests on those end points. 
 
 
+## Caveats
+This is from one day of Spring learning. I wish I had known better ways to avoid making singletons in the code. This would have been my next item of work after some review.
+
