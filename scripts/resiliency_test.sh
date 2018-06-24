@@ -15,10 +15,10 @@
 # 4. Sender, receiver  trustline servers are swapped : No change in either trustline 
 
 
-for a in  a b c d  ; do
-  for b in  b a c d ; do
+for user1 in  a b c d  ; do
+  for user2 in  b a c d ; do
 	for i in `seq 1 500`; do
-	    ./custom_one_request_test.sh $a $b
+	    ./custom_one_request_test.sh $user1 $user2
 	done
   done
 done
