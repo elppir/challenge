@@ -4,7 +4,7 @@ The basic interaction is based on a single entity `Transfer`. This records trans
 
 Each transfer agent is running as a peer in a cluster of distributed other agents. Each agent (server here) is responsible for maintaining its trustline healthy and tries its best to notify other servers in the cluster who are resposible for the counterparty's trustline consistency.
 
-A guaranteed successful transfer is essentially a two phase commit or a distributed transaction. The goal of the solution is not to solve or address that but reduce the likelihood of this leading to inconsistencies on Trustlines deviating from each other.
+A guaranteed successful transfer is essentially a two phase commit or a distributed transaction. The goal of the solution is not to solve or address that but reduce the likelihood of inconsistencies on Trustlines deviating from each other.
 
 Focus is to maintain consistency between the two trustlines and make it as reliable as possible in the time we have. A simple test would be two reverse transfers should cancel each other out.
 
