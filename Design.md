@@ -39,5 +39,5 @@ There are various processors TransferProcessor and RippleProcessor which deal wi
 
 
 ## Caveats
-This is from one day of Spring learning. I wish I had known better ways to avoid making singletons in the code. This would have been my next item of work after some review.
+This is from one day of Spring learning. I wish I had known better ways to avoid making singletons or discovering remote trustlines in the code. This would have been my next item of work after some review.
 
