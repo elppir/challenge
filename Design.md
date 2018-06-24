@@ -10,7 +10,7 @@ Focus is to maintain consistency between the two trustlines and make it as relia
 
 ## External Interactions:
 
-Two resources are exposed on the server endpoints. This is because transfers can happen in two ways on a server.
+Two resources are exposed on the server endpoints. This is because trustlines can change in two ways on a server.
 
 Lets say the server Sa is responsible for user *a*'s trustline:
 
