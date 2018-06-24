@@ -1,5 +1,5 @@
 # Challenge
-The awesome Challenge to move value from user *a* to user *b* with no shared state
+The awesome Challenge to move value from user *a* to user *b* consistently *BUT* with no shared state
 
 ## How to Build
 1. Go to root directory of the repo
