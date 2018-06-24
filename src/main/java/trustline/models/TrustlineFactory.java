@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.Set;
 
 public class TrustlineFactory {
+    
+    /* Get rid of statics and use Spring Application Scope, I guess?? How? :( " */
     private static Map<String,Map<String,Trustline>> trustlines  = new HashMap<>();
     private static Set<String> validUserIds =  new HashSet<String>();
 
@@ -23,7 +25,8 @@ public class TrustlineFactory {
         if ( userid == null || userid.length()==0 || counterparty ==null || counterparty.length()==0) {
             throw new InvalidMessageException("Trustline cannot be created with invalid user ids");
         }
-
+        
+        // cant run this user's trustline on this server
         if ( !isConfiguredUser(userid)){
             return null;
         }
