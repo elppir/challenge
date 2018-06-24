@@ -1,6 +1,6 @@
 # Design
 
-The basic interaction is based on a single entity `Transfer`. This records transfer of value (think money) from one user to another. The transfer can be negative or zero too. 
+The basic interaction is based on a single entity `Transfer`. This records transfer of value (think money) from one user to another. The transfer can be negative or zero too. This transfer can happen either as a first transfer request OR a ripple effect of another remote transfer request.
 
 Each transfer agent is running as a peer in a cluster of distributed other agents. Each agent (server here) is responsible for maintaining its trustline healthy and tries its best to notify other servers in the cluster who are resposible for the counterparty's trustline consistency.
 
