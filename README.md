@@ -45,7 +45,7 @@ This indicates the movement of value was successful on this server and trustline
 
 "Received  Ripple id=ba1107497374372233&from=b&to=a&amountPennies=1 ..."
 
-This indicates value transfer was requested on some other server and you are getting notified about it. 
+This indicates value transfer was requested on some other server and you are getting notified about it. ( The Ripple Effect) 
 
 ---
 
